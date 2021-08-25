@@ -42,8 +42,8 @@ locals {
 ##################################
 data archive_file kinesis_scaling_function_zip {
   type        = "zip"
-  source_file = "../main"
-  output_path = "../kinesis_scaling.zip"
+  source_file = "${path.module}/../main"
+  output_path = "${path.module}/../kinesis_scaling.zip"
 }
 
 resource aws_lambda_function kinesis_scaling_function {
